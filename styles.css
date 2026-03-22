@@ -162,6 +162,118 @@ strong {
   gap: 1.5rem;
 }
 
+/* Profile photo (P.png) */
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.profile-frame {
+  position: relative;
+  margin: 0;
+  width: min(176px, 46vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg-elevated);
+  border: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent),
+    0 10px 36px rgba(0, 0, 0, 0.28);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+
+[data-theme="light"] .profile-frame {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent) 22%, transparent),
+    0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.profile-frame::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    circle at 30% 25%,
+    color-mix(in srgb, var(--accent) 22%, transparent),
+    transparent 58%
+  );
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+  pointer-events: none;
+}
+
+.profile-frame:hover {
+  border-color: color-mix(in srgb, var(--accent) 75%, transparent);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 14px 44px color-mix(in srgb, var(--accent) 12%, transparent);
+  transform: translateY(-2px);
+}
+
+.profile-frame:hover::after {
+  opacity: 1;
+}
+
+.profile-frame img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+  transition: transform 0.45s var(--ease);
+}
+
+.profile-frame:hover img {
+  transform: scale(1.06);
+}
+
+.sidebar-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  .sidebar-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.35rem;
+  }
+
+  .profile-frame {
+    width: min(132px, 28vw);
+    margin: 0;
+  }
+
+  .sidebar-intro {
+    flex: 1;
+    padding-top: 0.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-frame,
+  .profile-frame img,
+  .profile-frame::after {
+    transition: none;
+  }
+
+  .profile-frame:hover {
+    transform: none;
+  }
+
+  .profile-frame:hover img {
+    transform: none;
+  }
+}
+
 .brand {
   display: block;
   font-size: clamp(2.25rem, 4vw, 2.75rem);
@@ -641,3 +753,4 @@ strong {
     transition: none;
   }
 }
+
