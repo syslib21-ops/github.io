@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김민수 — Software Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <div class="page">
+    <aside class="sidebar" aria-label="프로필 및 탐색">
+      <div class="sidebar-inner">
+        <header class="sidebar-header">
+          <a href="#" class="brand">김민수</a>
+          <p class="sidebar-role">Software Developer</p>
+          <p class="sidebar-bio">
+            사용자에게 가치 있는 서비스를 만드는 일에 집중합니다. UX 개선과 깨끗한 코드의 교차점을 좋아합니다.
+          </p>
+        </header>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="sideNav"
+          aria-label="섹션 메뉴 열기"
+        >
+          <span>섹션</span>
+          <svg class="nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+
+        <nav class="side-nav" id="sideNav" aria-label="페이지 섹션">
+          <ul>
+            <li>
+              <a href="#motivation" class="nav-link" data-section="motivation"><span class="nav-line" aria-hidden="true"></span>지원 동기</a>
+            </li>
+            <li>
+              <a href="#personality" class="nav-link" data-section="personality"><span class="nav-line" aria-hidden="true"></span>성격</a>
+            </li>
+            <li>
+              <a href="#motto" class="nav-link" data-section="motto"><span class="nav-line" aria-hidden="true"></span>생활신조</a>
+            </li>
+            <li>
+              <a href="#experience" class="nav-link" data-section="experience"><span class="nav-line" aria-hidden="true"></span>학창시절</a>
+            </li>
+            <li>
+              <a href="#future" class="nav-link" data-section="future"><span class="nav-line" aria-hidden="true"></span>입사 후</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-tools">
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="테마 전환" title="라이트 / 다크"></button>
+        </div>
+      </div>
+    </aside>
+
+    <main id="main" class="main">
+      <section id="motivation" class="section">
+        <h2 class="section-heading">지원 동기 및 포부</h2>
+        <div class="prose reveal">
+          <p>
+            안녕하세요. 소프트웨어 개발자로서 사용자에게 가치 있는 서비스를 제공하고 싶은 <strong>김민수</strong>입니다.
+          </p>
+          <p>
+            저는 대학에서 컴퓨터공학을 전공하며 프로그래밍의 기초를 다졌고, 졸업 후 2년간 스타트업에서 웹 개발 업무를 담당했습니다. 빠르게 변화하는 IT 업계에서 새로운 기술을 학습하고 적용하는 것에 큰 흥미를 느끼며, 특히 사용자 경험을 개선하는 기술적 솔루션을 찾는 것을 좋아합니다.
+          </p>
+          <p>
+            귀사는 혁신적인 기술력과 우수한 개발 문화로 업계에서 인정받고 있으며, 이러한 환경에서 저의 기술적 역량을 더욱 발전시키고 의미 있는 프로젝트에 기여하고 싶습니다.
+          </p>
+          <ul class="tag-list" aria-label="관심 기술">
+            <li>Web</li>
+            <li>UX</li>
+            <li>Agile</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="personality" class="section">
+        <h2 class="section-heading">성격의 장단점</h2>
+
+        <article class="panel reveal">
+          <h3 class="panel-title">장점</h3>
+          <ul class="strength-list">
+            <li>
+              <span class="strength-label">꾸준한 학습 의지</span>
+              새로운 기술 트렌드에 관심이 많아 개인 시간을 활용해 온라인 강의를 수강하고 사이드 프로젝트를 진행합니다.
+            </li>
+            <li>
+              <span class="strength-label">협업과 소통</span>
+              팀 프로젝트에서 다른 개발자, 디자이너, 기획자와 원활히 소통하며 공동의 목표를 달성하는 것을 중요하게 생각합니다.
+            </li>
+            <li>
+              <span class="strength-label">문제 해결 지향적</span>
+              복잡한 버그나 기술적 이슈에 직면했을 때 포기하지 않고 다양한 접근 방법을 시도하여 해결책을 찾습니다.
+            </li>
+          </ul>
+        </article>
+
+        <article class="panel panel-dim reveal">
+          <h3 class="panel-title">단점</h3>
+          <p class="panel-text">
+            <strong>완벽주의 성향</strong> — 때로는 코드의 완성도에 지나치게 집착하여 일정에 영향을 줄 수 있습니다. 이를 개선하기 위해 우선순위를 명확히 하고 적정 수준의 완성도를 목표로 하는 연습을 하고 있습니다.
+          </p>
+        </article>
+      </section>
+
+      <section id="motto" class="section">
+        <h2 class="section-heading">생활신조</h2>
+        <blockquote class="quote-block reveal">
+          <p class="quote-text">“기술은 사람을 위해 존재한다”</p>
+          <p class="quote-body">
+            개발자로서 항상 사용자의 관점에서 생각하려 노력합니다. 아무리 기술적으로 뛰어난 코드라도 실제 사용자에게 도움이 되지 않는다면 의미가 없다고 생각합니다. 사용자가 더 편리하고 효율적으로 업무를 처리할 수 있도록 돕는 것이 개발자의 사명이라고 믿습니다.
+          </p>
+        </blockquote>
+      </section>
+
+      <section id="experience" class="section">
+        <h2 class="section-heading">학창시절 경험</h2>
+
+        <article class="exp-card reveal">
+          <div class="exp-meta">
+            <span class="exp-period">교내 해커톤 · 우수상</span>
+            <h3 class="exp-title">지역 상권 활성화 앱</h3>
+          </div>
+          <p class="exp-desc">
+            대학교 3학년 때 5인 팀의 팀장으로 48시간 동안 <strong>React Native</strong>로 모바일 앱을 완성했습니다. 백엔드 API 설계부터 프론트엔드 구현까지 전 과정에 참여하며 풀스택 경험을 쌓았고, 팀원 역량 파악과 업무 분배로 리더십을 발휘했습니다.
+          </p>
+          <ul class="tag-list">
+            <li>React Native</li>
+            <li>REST API</li>
+            <li>Team Lead</li>
+          </ul>
+        </article>
+
+        <article class="exp-card reveal">
+          <div class="exp-meta">
+            <span class="exp-period">학회 · 4년</span>
+            <h3 class="exp-title">컴퓨터공학과 학회 · 멘토링</h3>
+          </div>
+          <p class="exp-desc">
+            후배 대상 프로그래밍 멘토링을 진행하며 복잡한 개념을 쉽게 설명하는 연습을 했습니다. 현재 팀에서 코드 리뷰와 기술 공유에도 이 경험이 큰 도움이 되고 있습니다.
+          </p>
+          <ul class="tag-list">
+            <li>Mentoring</li>
+            <li>Code Review</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="future" class="section section-last">
+        <h2 class="section-heading">입사 후 포부</h2>
+        <div class="prose reveal">
+          <p>
+            입사 후에는 먼저 귀사의 개발 문화와 코딩 컨벤션에 빠르게 적응하여 팀의 일원으로서 역할을 다하겠습니다.
+          </p>
+          <p>
+            단기적으로는 맡은 업무를 성실히 수행하면서 귀사의 비즈니스 도메인에 대한 이해도를 높이고, 기존 팀원들과의 협업을 통해 개발 실력을 향상시키겠습니다.
+          </p>
+          <p>
+            중장기적으로는 기술 리더로 성장하여 주니어 개발자들을 멘토링하고, 새로운 기술 도입과 개발 프로세스 개선에 기여하고 싶습니다. 특히 <strong>클라우드</strong>와 <strong>마이크로서비스 아키텍처</strong>에 대한 전문성을 쌓아 서비스의 확장성과 안정성 향상에 기여하겠습니다.
+          </p>
+          <p>
+            궁극적으로는 귀사와 함께 성장하여 IT 업계에서 인정받는 개발자가 되고, 사용자에게 진정한 가치를 제공하는 혁신적인 서비스 개발에 핵심적인 역할을 담당하고 싶습니다.
+          </p>
+          <ul class="tag-list">
+            <li>Cloud</li>
+            <li>Microservices</li>
+            <li>Leadership</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="main-footer">
+        <p>김민수 · 자기소개</p>
+        <button type="button" class="to-top" id="toTop" aria-label="맨 위로">맨 위로</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
